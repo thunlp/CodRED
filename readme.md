@@ -10,6 +10,16 @@ pip install transformers==4.3.3
 pip install eveliver==1.21.0
 ```
 
+<!-- 
+apex need to be installed from GitHub:
+```
+git clone https://github.com/NVIDIA/apex
+cd apex
+python setup.py install
+``` 
+-->
+
+
 Then download the following files: `wiki_ent_link.jsonl`, `distant_documents.jsonl`, `popular_page_ent_link.jsonl` to `baseline/data/rawdata/` from Aliyun OSS.
 
 To run the baseline (Table 3, closed, end-to-end):
@@ -22,7 +32,21 @@ cd ../codred-blend
 python -m torch.distributed.launch --nproc_per_node=4 codred-blend.py --train --dev --per_gpu_train_batch_size 1 --per_gpu_eval_batch_size 1 --learning_rate 3e-5 --num_workers 2 --logging_step 10
 ```
 
+<!-- At least 4 GPUs are required -->
+<!-- 
+If you encounter
+```
+venv/lib/python3.7/site-packages/eveliver/trainer.py", line 322, in load_data
+     train_dataset, dev_dataset, test_dataset = self.callback.load_data()
+ValueError: not enough values to unpack (expected 3, got 2)
+```
+Try to delete test_dataset. 
+-->
+
+
 The result is `AUC=46.69, F1=51.03`.
+<!-- The final result is at the end of the r/7/output/dev-stat-1.json file. -->
+<!-- The result is `AUC=48.59, F1=51.99`. -->
 
 Arguments:
 
