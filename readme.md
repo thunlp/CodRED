@@ -20,7 +20,7 @@ python setup.py install
 -->
 
 
-Then download the following files: `wiki_ent_link.jsonl`, `distant_documents.jsonl`, `popular_page_ent_link.jsonl` to `baseline/data/rawdata/` from Aliyun OSS.
+Then download the following files: `wiki_ent_link.jsonl`, `distant_documents.jsonl`, `popular_page_ent_link.jsonl` to `baseline/data/rawdata/`:
 
 ```
 wget https://thunlp.oss-cn-qingdao.aliyuncs.com/wiki_ent_link.jsonl
