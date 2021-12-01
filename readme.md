@@ -1,4 +1,14 @@
-# CODRED
+# CodRED
+
+Dataset and baseline code for the EMNLP 2021 paper [CodRED: A Cross-Document Relation Extraction Dataset for Acquiring Knowledge in the Wild](https://aclanthology.org/2021.emnlp-main.366/)
+
+CodRED is the first human-annotated cross-document relation extraction (RE) dataset, aiming to test the RE systems’ ability of knowledge acquisition in the wild. CodRED has the following features: 
++ it requires natural language understanding in different granularity, including coarse-grained document retrieval, as well as fine-grained cross-document multi-hop reasoning; 
++ it contains 30,504 relational facts associated with 210,812 reasoning text paths, as well as enjoys a broad range of balanced relations, and long documents in diverse topics; 
++ it provides strong supervision about the reasoning text paths for predicting the relation, to help guide RE systems to perform meaningful and interpretable reasoning; 
++ it contains adversarially-created hard NA instances to avoid RE models to predict relations by inferring from entity names instead of text information.
+
+The competition for evaluation on test set will be released soon.
 
 ### Baseline
 
@@ -69,4 +79,16 @@ To run experiments with evidence sentence:
 
 ```
 python -m torch.distributed.launch --nproc_per_node=4 codred-evidence.py --train --dev --per_gpu_train_batch_size 1 --per_gpu_eval_batch_size 1 --learning_rate 3e-5 --num_workers 2 --logging_step 10
+```
+
+## Cite
+If you use the dataset or the code, please cite this paper:
+```
+@inproceedings{yao-etal-2021-codred,
+    title = "{C}od{RED}: A Cross-Document Relation Extraction Dataset for Acquiring Knowledge in the Wild",
+    author = "Yao, Yuan and Du, Jiaju and Lin, Yankai and Li, Peng and Liu, Zhiyuan and Zhou, Jie and Sun, Maosong",
+    booktitle = "Proceedings of EMNLP 2021",
+    year = "2021",
+    pages = "4452--4472",
+}
 ```
