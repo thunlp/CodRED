@@ -28,7 +28,7 @@ wget https://thunlp.oss-cn-qingdao.aliyuncs.com/distant_documents.jsonl
 wget https://thunlp.oss-cn-qingdao.aliyuncs.com/popular_page_ent_link.jsonl
 ```
 
-To run the baseline (Table 3, closed, end-to-end):
+To run the baseline (Table 3 in the paper, closed setting, end-to-end model):
 
 ```
 cd baseline/data/
