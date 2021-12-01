@@ -22,6 +22,12 @@ python setup.py install
 
 Then download the following files: `wiki_ent_link.jsonl`, `distant_documents.jsonl`, `popular_page_ent_link.jsonl` to `baseline/data/rawdata/` from Aliyun OSS.
 
+```
+wget https://thunlp.oss-cn-qingdao.aliyuncs.com/wiki_ent_link.jsonl
+wget https://thunlp.oss-cn-qingdao.aliyuncs.com/distant_documents.jsonl
+wget https://thunlp.oss-cn-qingdao.aliyuncs.com/popular_page_ent_link.jsonl
+```
+
 To run the baseline (Table 3, closed, end-to-end):
 
 ```
