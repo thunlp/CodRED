@@ -60,9 +60,9 @@ Try to delete test_dataset.
 -->
 
 
-The result is `AUC=46.69, F1=51.03`.
+<!-- The result is `AUC=46.69, F1=51.03`. (by jiajudu)-->
 <!-- The final result is at the end of the r/7/output/dev-stat-1.json file. -->
-<!-- The result is `AUC=48.59, F1=51.99`. -->
+The result is `AUC=48.59, F1=51.99`.
 
 Arguments:
 
@@ -78,8 +78,12 @@ Arguments:
 To run experiments with evidence sentence:
 
 ```
+cd ../codred-evidence
 python -m torch.distributed.launch --nproc_per_node=4 codred-evidence.py --train --dev --per_gpu_train_batch_size 1 --per_gpu_eval_batch_size 1 --learning_rate 3e-5 --num_workers 2 --logging_step 10
 ```
+
+<!-- evidence_train.json, evidence_dev.json and evidence_test.json are not released. -->
+The result is `AUC=79.09, F1=73.76`.
 
 ## Cite
 If you use the dataset or the code, please cite this paper:
