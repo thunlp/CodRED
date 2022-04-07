@@ -8,7 +8,8 @@ CodRED is the first human-annotated cross-document relation extraction (RE) data
 + it provides strong supervision about the reasoning text paths for predicting the relation, to help guide RE systems to perform meaningful and interpretable reasoning; 
 + it contains adversarially-created hard NA instances to avoid RE models to predict relations by inferring from entity names instead of text information.
 
-The competition for evaluation on test set will be released soon.
+## Codalab
+If you are interested in our dataset, you are welcome to join in the Codalab competition at [CodRED](https://codalab.lisn.upsaclay.fr/competitions/3770)
 
 ### Baseline
 
